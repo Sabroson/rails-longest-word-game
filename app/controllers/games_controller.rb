@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'open-uri'
+require 'json'
 # this is my class controller
 class GamesController < ApplicationController
   def new
