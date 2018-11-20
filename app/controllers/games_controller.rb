@@ -8,15 +8,16 @@ class GamesController < ApplicationController
     @letters = random_letters
   end
 
-  def score
-    @message = params[:message]
-  end
+  # def score
+  #   @message = params[:message]
+  # end
 
-  def calc_score
+  def score
     letters = params[:letters].split
     word = params[:word].upcase
     answer = check_word(word, letters)
-    redirect_to score_path(message: answer)
+    # redirect_to score_path(message: answer)
+    @message = answer
   end
 
   private
